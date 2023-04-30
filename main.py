@@ -209,7 +209,6 @@ def comprehension_test():
         st.write("Your score is: ", score)
 
     # Main App
-    st.title("Aptitude Test")
     st.write("Answer the following questions:")
 
     answers = []
@@ -255,7 +254,6 @@ def logical_reasoning_test():
         st.write("Your score is: ", score)
 
     # Main App
-    st.title("Aptitude Test")
     st.write("Answer the following questions:")
 
     answers = []
