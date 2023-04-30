@@ -178,20 +178,79 @@ def grammar_test():
 def comprehension_test():
     st.title("Comprehension Test")
     st.write("This is the comprehension test page")
+	st.markdown(
+        """
+        Please read the story carefully before attempting to answer the questions.
+
+
+The sun was setting over the mountains as John sat outside his cabin, sipping a cup of hot tea.
+He had been living alone in the wilderness for the past three years, and he loved every minute of it. 
+The silence, the fresh air, and the stunning views made him feel more alive than ever.
+
+As he sat there, lost in thought, he heard a rustling sound coming from the bushes. 
+He froze, listening intently, and heard it again. 
+Slowly, he got up and walked towards the bushes, his heart racing. What could it be?
+
+Suddenly, a small, scruffy-looking dog appeared from behind the bushes, wagging its tail. 
+John breathed a sigh of relief and smiled. 
+The dog looked hungry and scared, and John knew he had to help it.
+
+He gave the dog some food and water, and soon enough, it was wagging its tail and barking happily. 
+John decided to keep the dog and named it Rusty. 
+Rusty became John's constant companion and soon learned to love the wilderness as much as John did.
+        """
+    )
+
     # List of questions and answers
-    questions = [    {        "question": "What is the capital of France?",        "options": ["Paris", "London", "Berlin", "Madrid"],
-        "answer": "Paris"
+    questions = [    {       "question": "What was John doing when the story began?",
+        "options": ["A. Hunting", "B. Fishing", "C. Sitting outside his cabin", "D. None of the above"],
+        "answer": "C. Sitting outside his cabin"
     },
-    {
-        "question": "What is the highest mountain in the world?",
-        "options": ["Mount Kilimanjaro", "Mount Everest", "Mount Fuji", "Mount McKinley"],
-        "answer": "Mount Everest"
+	{
+        "question": "How long had John been living alone in the wilderness?",
+        "options": ["A. One year", "B. Two years", "C. Three years", "D.  Four years"],
+        "answer": "C. Three years"
     },
-    {
-        "question": "What is the currency of Japan?",
-        "options": ["Dollar", "Pound", "Yen", "Euro"],
-        "answer": "Yen"
-    }
+	{
+        "question": "What did John love about living in the wilderness?",
+        "options": ["A. The silence", "B. The fresh air", "C. The stunning views", "D.  All of the above"],
+        "answer": "D.  All of the above"
+    },
+	{
+        "question": "What did John hear coming from the bushes?",
+        "options": ["A. The wind blowing", "B. A rustling sound", "C. A river flowing", "D. None of the above"],
+        "answer": "B. A rustling sound"
+    },
+	{
+        "question": "What did John find behind the bushes?",
+        "options": ["A.  A deer", "B. A bear", "C. A small, scruffy-looking dog", "None of the above"],
+        "answer": "C. A small, scruffy-looking dog"
+    },
+	{
+        "question": "How did John feel when he heard the rustling sound?",
+        "options": ["A. Scared", "B. Excited", "C. Anxious", "D. Happy"],
+        "answer": "A. Scared"
+    },
+	{
+        "question": "What did John do to help the dog?",
+        "options": ["A. He gave it some bread and drinks", "B. He gave it some food and water", "C. He chased it away", "D.  He ignored it"],
+        "answer": "B. He gave it some food and water"
+    },
+	{
+        "question": "What did John name the dog?",
+        "options": ["A. Scruffy", "B. Rex", "C. Rusty", "D. Spot"],
+        "answer": "C. Rusty"
+    },
+	{
+        "question": "What did Rusty become for John?",
+        "options": ["A.  His enemy", "B. His constant companion", "C. His prey", "D. None of the above"],
+        "answer": "B. His constant companion"
+    },
+	{
+        "question": "What did Rusty learn to love?",
+        "options": ["A. The city life", "B. The countryside", "C. The Forest", "D. The wilderness"],
+        "answer": "D. The wilderness"
+    },
 ]
 
      # Function to show the questions and options
