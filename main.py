@@ -71,19 +71,81 @@ def grammar_test():
     st.title("Grammar Test")
     st.write("This is the grammar test page")
     # List of questions and answers
-    questions = [    {        "question": "What is the capital of France?",        "options": ["Paris", "London", "Berlin", "Madrid"],
-        "answer": "Paris"
+    questions = [    {     "question": "Which sentence is grammatically correct?",
+        "options": ["A. I should of gone to the store.", "B. I should have gone to the store.", "C. I should of went to the store.", "D. I should of been gone to the store."],
+        "answer": "B. I should have gone to the store."
     },
     {
-        "question": "What is the highest mountain in the world?",
-        "options": ["Mount Kilimanjaro", "Mount Everest", "Mount Fuji", "Mount McKinley"],
-        "answer": "Mount Everest"
+        "question": "Which sentence is grammatically correct?",
+        "options": ["A. The cake tastes goodly.", "B. The cake tastes good.", "C. The cake tastes well.", "D. The cake tastes deliciously."],
+        "answer": "Answer: B. The cake tastes good.
     },
-    {
-        "question": "What is the currency of Japan?",
-        "options": ["Dollar", "Pound", "Yen", "Euro"],
-        "answer": "Yen"
-    }
+	{
+        "question": "Which sentence is grammatically correct?",
+        "options": ["A. My parents bought my brother and I a new car.", "B. My parents bought my brother and me a new car.", "C. My parents bought a new car for my brother and I.", "D. My parents bought a new car for my brother and me."],
+        "answer": "Answer: D. My parents bought a new car for my brother and me."
+    },
+	{
+        "question": "Which sentence is grammatically correct?",
+        "options": ["A. She is the most prettiest girl in the class.", "B. She is the prettiest girl in the class.", "C. She is prettier than any girl in the class.", "D. She is more pretty than any girl in the class."],
+        "answer": "Answer: B. She is the prettiest girl in the class."
+    },
+	{
+        "question": "Identify the sentence that contains an error in subject-verb agreement:",
+        "options": ["A. The group of students is studying hard for the exams.", "B. The book on the table belong to me.", "C. The dog barks loudly every morning.", "d. The choir sings beautifully during the concert."],
+        "answer": "B. The book on the table belong to me."
+    },
+	{
+        "question": "Choose the correct form of the verb to complete the sentence:\n The committee _____ to hold an emergency meeting next week.\n",
+        "options": ["A. decides", "B. decide", "C. decided", "D. has decided"],
+        "answer": "D. has decided"
+    },
+	{
+        "question": "Which sentence is in the passive voice?",
+        "options": ["A. The teacher graded the papers.", "B. The papers were graded by the teacher.", "C. The student wrote the essay.", "D. The essay was written by the student."],
+        "answer": "B. The papers were graded by the teacher."
+    },
+	{
+        "question": "Identify the sentence that contains an error in parallel structure:",
+        "options": ["A. She enjoys hiking, swimming, and biking.", "B. He likes to eat pizza, pasta, and drinking soda.", "C. My sister is smart, funny, and kind.", "D. We need to focus on reducing costs, improving quality, and increasing efficiency."],
+        "answer": "B. He likes to eat pizza, pasta, and drinking soda."
+    },
+	{
+        "question": "Choose the correct form of the verb to complete the sentence:\n The team _____ the championship last year.\n",
+        "options": ["A. win", "B. won", "C. have won", "D. had won"],
+        "answer": "B. won"
+    },
+	{
+        "question": "Identify the sentence that contains an error in pronoun agreement:\n ",
+        "options": ["A. Everyone should do their part to help the environment.", "B. Each student must bring his or her own supplies to class.", "C. Someone left their umbrella in the hallway.", "D. Either of the options has its own advantages and disadvantages."],
+        "answer": "C. Someone left their umbrella in the hallway."
+    },
+	{
+        "question": "Choose the correct form of the verb to complete the sentence:\n The sun _____ in the east and _____ in the west.\n",
+        "options": ["A. rises, set", "B. rose, setted", "C. rise, sets", "D. rises, sets"],
+        "answer": "D. rises, sets"
+    },
+	{
+        "question": "Identify the sentence that contains an error in punctuation:",
+        "options": ["A. The concert was great; everyone enjoyed it.", "B. I bought a new car, but I still need to get it insured.", "C. She said, "I love you."", "D. We went to the beach, played in the water and ate ice cream."],
+        "answer": "D. We went to the beach, played in the water and ate ice cream."
+    },
+	{
+        "question": "Identify the sentence that contains an error in capitalization:",
+        "options": ["A. I live on Main Street.", "B. My favorite color is blue.", "C. In the summer, we like to go to the beach.", "D. The statue of Liberty is a symbol of freedom."],
+        "answer": "D. The statue of Liberty is a symbol of freedom."
+    },
+	{
+        "question": "Choose the correct pronoun to complete the sentence:\n She gave the present to _____.\n",
+        "options": ["A. he and I", "B. him and me", "C. he and me", "D. him and I"],
+        "answer": "B. him and me"
+    },
+	{
+        "question": "Choose the sentence that contains a misplaced modifier:",
+        "options": ["A. While jogging, the dog chased the ball.", "B. The dog chased the ball while jogging.", "C. Chasing the ball, the dog was jogging.", "D. The jogging dog chased the ball."],
+        "answer": "Answer: C. Chasing the ball, the dog was jogging."
+    },
+	
 ]
 
     # Function to show the questions and options
