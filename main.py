@@ -71,19 +71,19 @@ def grammar_test():
     st.title("Grammar Test")
     st.write("This is the grammar test page")
     # List of questions and answers
-    questions = [    {     "question": "Which sentence is grammatically correct?",
-        "options": ["A. I should of gone to the store.", "B. I should have gone to the store.", "C. I should of went to the store.", "D. I should of been gone to the store."],
-        "answer": "B. I should have gone to the store."
+    questions = [    {     "question": "Which sentence uses the correct article?",
+        "options": ["A.  He is a European citizen.", "B. He is an European citizen.", "C. He is the European citizen.", "D. He is of European citizen."],
+        "answer": "A.  He is a European citizen."
     },
     {
-        "question": "Which sentence is grammatically correct?",
-        "options": ["A. The cake tastes goodly.", "B. The cake tastes good.", "C. The cake tastes well.", "D. The cake tastes deliciously."],
-        "answer": "B. The cake tastes good.
+        "question": "Which sentence uses the correct pronoun case?",
+        "options": ["A. Whom is she going to the party with?", "B. Who is she going to the party with?", "C. With who is she going to the party?", "D. Whose is she going to the party with?"],
+        "answer": "B. The cake tastes good."
     },
 	{
-        "question": "Which sentence is grammatically correct?",
-        "options": ["A. My parents bought my brother and I a new car.", "B. My parents bought my brother and me a new car.", "C. My parents bought a new car for my brother and I.", "D. My parents bought a new car for my brother and me."],
-        "answer": "D. My parents bought a new car for my brother and me."
+        "question": "Identify the conjunction in the following sentence: \"I ate dinner and watched TV.\"",
+        "options": ["A.  I", "B. Ate", "C. And", "D. Watched"],
+        "answer": "C. And"
     },
 	{
         "question": "Which sentence is grammatically correct?",
