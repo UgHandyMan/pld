@@ -345,14 +345,21 @@ def logical_reasoning_test():
         calculate_score(answers)
 
     # Define final score page
-    def final_score():
-      st.title("Final Score")
-      def calculate_final_score(score1, score2, score3):
-         final_score = score1 + score2 + score3
-         percentage_score = (final_score / 35) * 100
-         return percentage_score
-
-      st.write("Your final score is : ", percentage_score)
+def final_score():
+    st.title("Final Score")
+    
+    def calculate_final_score(score1, score2, score3):
+        final_score = score1 + score2 + score3
+        percentage_score = (final_score / 35) * 100
+        return percentage_score
+    
+    score1 = st.number_input("Enter score 1", value=0)
+    score2 = st.number_input("Enter score 2", value=0)
+    score3 = st.number_input("Enter score 3", value=0)
+    
+    if st.button("Calculate final score"):
+        percentage_score = calculate_final_score(score1, score2, score3)
+        st.write("Your final score is:", percentage_score, "%")
 
 
  # Add footer
