@@ -55,7 +55,7 @@ def main():
     )
 
     # Set menu options
-    menu = ["Grammar Test", "Comprehension Test", "Logical Reasoning Test"]
+    menu = ["Grammar Test", "Comprehension Test", "Logical Reasoning Test", "Final Score"]
     choice = st.sidebar.selectbox("Select Test", menu)
 
     # Render selected test page
@@ -65,6 +65,8 @@ def main():
         comprehension_test()
     elif choice == "Logical Reasoning Test":
         logical_reasoning_test()
+    elif choice == "Final Score":
+        final_score()
 
 # Define grammar test page
 def grammar_test():
@@ -342,7 +344,11 @@ def logical_reasoning_test():
     if st.button("Submit"):
         calculate_score(answers)
 
-#Add a footer
+# Define final score page
+def final_score():
+    st.title("Final Score")
+
+
  # Add footer
     with st.container():
         st.write("")
