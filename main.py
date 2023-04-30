@@ -55,7 +55,7 @@ def main():
     )
 
     # Set menu options
-    menu = ["Grammar Test", "Comprehension Test", "Logical Reasoning Test", "Final Score"]
+    menu = ["Final Score", "Grammar Test", "Comprehension Test", "Logical Reasoning Test"]
     choice = st.sidebar.selectbox("Select Test", menu)
 
     # Render selected test page
@@ -353,13 +353,13 @@ def final_score():
         percentage_score = (final_score / 35) * 100
         return percentage_score
     
-    score1 = st.number_input("Enter score 1", value=0)
-    score2 = st.number_input("Enter score 2", value=0)
-    score3 = st.number_input("Enter score 3", value=0)
+    score1 = st.number_input("Enter Grammar Test Score", value=0)
+    score2 = st.number_input("Enter Comprehension Test score", value=0)
+    score3 = st.number_input("Enter Logical Reasoning Test Score", value=0)
     
     if st.button("Calculate final score"):
         percentage_score = calculate_final_score(score1, score2, score3)
-        st.write("Your final score is:", percentage_score, "%")
+        st.write(f'Your final score is: {percentage_score:.2f}%')
 
 
  # Add footer
