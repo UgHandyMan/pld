@@ -69,7 +69,6 @@ def main():
 # Define grammar test page
 def grammar_test():
     st.title("Grammar Test")
-    st.write("This is the grammar test page")
     # List of questions and answers
     questions = [    {     "question": "Which sentence uses the correct article?",
         "options": ["A.  He is a European citizen.", "B. He is an European citizen.", "C. He is the European citizen.", "D. He is of European citizen."],
@@ -176,27 +175,12 @@ def grammar_test():
 # Define comprehension test page
 def comprehension_test():
     st.title("Comprehension Test")
-    st.write("This is the comprehension test page")
-	st.markdown(
+    st.markdown(
         """
-        Please read the story carefully before attempting to answer the questions.
-
-
-The sun was setting over the mountains as John sat outside his cabin, sipping a cup of hot tea.
-He had been living alone in the wilderness for the past three years, and he loved every minute of it. 
-The silence, the fresh air, and the stunning views made him feel more alive than ever.
-
-As he sat there, lost in thought, he heard a rustling sound coming from the bushes. 
-He froze, listening intently, and heard it again. 
-Slowly, he got up and walked towards the bushes, his heart racing. What could it be?
-
-Suddenly, a small, scruffy-looking dog appeared from behind the bushes, wagging its tail. 
-John breathed a sigh of relief and smiled. 
-The dog looked hungry and scared, and John knew he had to help it.
-
-He gave the dog some food and water, and soon enough, it was wagging its tail and barking happily. 
-John decided to keep the dog and named it Rusty. 
-Rusty became John's constant companion and soon learned to love the wilderness as much as John did.
+            Please read the story carefully before attempting to answer the questions.\n The sun was setting over the mountains as John sat outside his cabin, sipping a cup of hot tea.\n He had been living alone in the wilderness for the past three years, and he loved every minute of it.\n The silence, the fresh air, and the stunning views made him feel more alive than ever.\n As he sat there, lost in thought, he heard a rustling sound coming from the bushes.\n He froze, listening intently, and heard it again.\n
+Slowly, he got up and walked towards the bushes, his heart racing. What could it be?\n
+Suddenly, a small, scruffy-looking dog appeared from behind the bushes, wagging its tail.\n John breathed a sigh of relief and smiled.\n The dog looked hungry and scared, and John knew he had to help it.\n He gave the dog some food and water, and soon enough, it was wagging its tail and barking happily. 
+John decided to keep the dog and named it Rusty.\n Rusty became John's constant companion and soon learned to love the wilderness as much as John did.
         """
     )
 
@@ -280,20 +264,56 @@ Rusty became John's constant companion and soon learned to love the wilderness a
 # Define logical reasoning test page
 def logical_reasoning_test():
     st.title("Logical Reasoning Test")
-    st.write("This is the logical reasoning test page")
      # List of questions and answers
-    questions = [    {        "question": "What is the capital of France?",        "options": ["Paris", "London", "Berlin", "Madrid"],
-        "answer": "Paris"
+    questions = [ {
+        "question": "In a group of 50 students, 35 play basketball, 25 play volleyball, and 10 play both. How many students play neither sport?",
+        "options": ["A. 0", "B. 5", "C. 10", "D. 15"],
+        "answer": "D. 15"
     },
-    {
-        "question": "What is the highest mountain in the world?",
-        "options": ["Mount Kilimanjaro", "Mount Everest", "Mount Fuji", "Mount McKinley"],
-        "answer": "Mount Everest"
+	{
+        "question": "If A is twice as old as B, and C is half as old as A, which of the following must be true?",
+        "options": ["A. C is older than B", "B.  B is older than C", "C. A is older than B", "D.  A is older than B and C combined"],
+        "answer": ""
     },
-    {
-        "question": "What is the currency of Japan?",
-        "options": ["Dollar", "Pound", "Yen", "Euro"],
-        "answer": "Yen"
+	{
+        "question": "If all lions are tigers, and some tigers are leopards, which of the following must be true?",
+        "options": ["A. All tigers are leopards", "B. Some lions are tigers", "All lions are leopards", "Some leopards are tigers"],
+        "answer": "B. Some lions are tigers"
+    },
+	{
+        "question": "If all elephants are mammals and all mammals are animals, which of the following statements must be true?",
+        "options": ["A. All mammals are elephants", "B. All animals are elephants", "C. All animals are mammals", "D. None of the above"],
+        "answer": "A. All animals are mammals"
+    },
+	{
+        "question": "If some doctors are not surgeons and some surgeons are not nurses, which of the following statements must be true?",
+        "options": ["A. Some doctors are nurses", "B. Some nurses are not surgeons", "C. Some surgeons are doctors", "D. None of the above"],
+        "answer": "D. None of the above"
+    },
+	{
+        "question": "If all roses are flowers and some flowers are yellow, which of the following statements must be true?",
+        "options": ["A. All roses are yellow", "B. All yellow flowers are roses", "C.  Some roses are yellow", "D. None of the above"],
+        "answer": "C.  Some roses are yellow"
+    },
+	{
+        "question": "A company has a policy of not hiring anyone with a criminal record. John has a criminal record, but his conviction was for a non-violent crime that occurred 10 years ago. Should the company hire John?",
+        "options": ["A.  Yes, because his crime was non-violent and occurred a long time ago.", "B. No, because the company has a policy against hiring anyone with a criminal record.", "C. It depends on the job John is applying for.", "D. None of the  Above"],
+        "answer": "C. It depends on the job John is applying for."
+    },
+	{
+        "question": "If all zebras are black and white, and all horses are black, what can you conclude?",
+        "options": ["A. All horses are zebras.", "B. All zebras are horses.", "C. Some horses are zebras.", "D. No conclusion can be made."],
+        "answer": "D. No conclusion can be made."
+    },
+	{
+        "question": "If all pens are pencils, and all pencils are erasable, what can you conclude?",
+        "options": ["A. All erasable objects are pens.", "B. All pens are erasable.", "C. All pencils are pens.", "D. No conclusion can be made."],
+        "answer": "B. All pens are erasable."
+    },
+	{
+        "question": "If all swans are white and Tommy saw a black swan, what can we infer?",
+        "options": ["A. Tommy did not see a swan.", "B. Tommy saw a non-white swan.", "C. The law of nature has been violated.", "D. We cannot infer anything"],
+        "answer": "B. Tommy saw a non-white swan."
     }
 ]
  
