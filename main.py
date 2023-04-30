@@ -157,11 +157,11 @@ def grammar_test():
 
     # Function to calculate and display the score
     def calculate_score(answers):
-        score = 0
+        score1 = 0
         for i, ans in enumerate(answers):
             if ans == questions[i]["answer"]:
-                score += 1
-        st.write("Your score is: ", score)
+                score1 += 1
+        st.write("Your score is: ", score1)
 
     # Main App
     st.write("Answer the following questions:")
@@ -246,11 +246,11 @@ John decided to keep the dog and named it Rusty.\n Rusty became John's constant 
 
     # Function to calculate and display the score
     def calculate_score(answers):
-        score = 0
+        score2 = 0
         for i, ans in enumerate(answers):
             if ans == questions[i]["answer"]:
-                score += 1
-        st.write("Your score is: ", score)
+                score2 += 1
+        st.write("Your score is: ", score2)
 
     # Main App
     st.write("Answer the following questions:")
@@ -327,11 +327,11 @@ def logical_reasoning_test():
 
     # Function to calculate and display the score
     def calculate_score(answers):
-        score = 0
+        score3 = 0
         for i, ans in enumerate(answers):
             if ans == questions[i]["answer"]:
-                score += 1
-        st.write("Your score is: ", score)
+                score3 += 1
+        st.write("Your score is: ", score3)
 
     # Main App
     st.write("Answer the following questions:")
@@ -344,9 +344,15 @@ def logical_reasoning_test():
     if st.button("Submit"):
         calculate_score(answers)
 
-# Define final score page
-def final_score():
-    st.title("Final Score")
+    # Define final score page
+    def final_score():
+      st.title("Final Score")
+      def calculate_final_score(score1, score2, score3):
+         final_score = score1 + score2 + score3
+         percentage_score = (final_score / 35) * 100
+         return percentage_score
+
+      st.write("Your final score is : ", percentage_score)
 
 
  # Add footer
