@@ -78,17 +78,17 @@ def grammar_test():
     {
         "question": "Which sentence is grammatically correct?",
         "options": ["A. The cake tastes goodly.", "B. The cake tastes good.", "C. The cake tastes well.", "D. The cake tastes deliciously."],
-        "answer": "Answer: B. The cake tastes good.
+        "answer": "B. The cake tastes good.
     },
 	{
         "question": "Which sentence is grammatically correct?",
         "options": ["A. My parents bought my brother and I a new car.", "B. My parents bought my brother and me a new car.", "C. My parents bought a new car for my brother and I.", "D. My parents bought a new car for my brother and me."],
-        "answer": "Answer: D. My parents bought a new car for my brother and me."
+        "answer": "D. My parents bought a new car for my brother and me."
     },
 	{
         "question": "Which sentence is grammatically correct?",
         "options": ["A. She is the most prettiest girl in the class.", "B. She is the prettiest girl in the class.", "C. She is prettier than any girl in the class.", "D. She is more pretty than any girl in the class."],
-        "answer": "Answer: B. She is the prettiest girl in the class."
+        "answer": "B. She is the prettiest girl in the class."
     },
 	{
         "question": "Identify the sentence that contains an error in subject-verb agreement:",
@@ -143,7 +143,7 @@ def grammar_test():
 	{
         "question": "Choose the sentence that contains a misplaced modifier:",
         "options": ["A. While jogging, the dog chased the ball.", "B. The dog chased the ball while jogging.", "C. Chasing the ball, the dog was jogging.", "D. The jogging dog chased the ball."],
-        "answer": "Answer: C. Chasing the ball, the dog was jogging."
+        "answer": "C. Chasing the ball, the dog was jogging."
     },
 	
 ]
