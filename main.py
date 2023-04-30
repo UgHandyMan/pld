@@ -127,7 +127,7 @@ def grammar_test():
     },
 	{
         "question": "Identify the sentence that contains an error in punctuation:",
-        "options": ["A. The concert was great; everyone enjoyed it.", "B. I bought a new car, but I still need to get it insured.", "C. She said, "I love you."", "D. We went to the beach, played in the water and ate ice cream."],
+        "options": ["A. The concert was great; everyone enjoyed it.", "B. I bought a new car, but I still need to get it insured.", "C. She said, \"I love you.\"", "D. We went to the beach, played in the water and ate ice cream."],
         "answer": "D. We went to the beach, played in the water and ate ice cream."
     },
 	{
