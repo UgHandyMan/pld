@@ -205,39 +205,30 @@ def logical_reasoning_test():
         calculate_score(answers)
 
 #Add a footer
-ft = """
-<style>
-a:link , a:visited{
-color: #BFBFBF;
-background-color: transparent;
-text-decoration: none;
-}
-
-footer{
-    visibility:hidden;
-}
-
-.footer {
-position: relative;
-left: 2px;
-top: 480px;
-bottom: 0;
-width: 100%;
-background-color: transparent;
-color: #808080; 
-text-align: center; 
-}
-</style>
-
-
-
-<div class="footer">
-<p style='font-size: 1em;'><b><i> Made for Evans</i></b></p>
-</div>
-
-</div>
-"""
-st.write(ft, unsafe_allow_html=True)
+ # Add footer
+    with st.container():
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("Sample Aptitude test for evans")
+        st.write("Copyright © 2023")
+        st.write("")
+        st.write("")
+        st.write("")
 
 # Run the main app function
 if __name__ == "__main__":
