@@ -1,5 +1,6 @@
 import streamlit as st
 import datetime 
+from login import login
 
 # Define colors
 color_bg = "#f9f9f9"
@@ -43,39 +44,38 @@ def page_style():
 
 # Define main app function
 def main():
-    # Set page style
-    page_style()
+    if login():
+        username, email = login()
+        if username and email:
+            st.write(f'Welcome, {username}!')
+            # Set page style
+            page_style()
 
-    # Set app title and instructions
-    st.title("Aptitude Test")
+            # Set app title and instructions
+            st.title("Aptitude Test")
 
-    st.sidebar.title('User Information')
-    ussername = st.sidebar.text_input("Enter your Name")
-    email = st.sidebar.text_input("Enter your Email Address")
-
-    st.write(f'Welcome {name}!')
-    st.markdown(
+            st.markdown(
         """
         This is a test of your abilities in grammar, comprehension, and logical reasoning.
         Please select the test you would like to take from the menu on the left.
         """
         )
 
-    # Set menu options
-    menu = ["Final Score", "Grammar Test", "Comprehension Test", "Logical Reasoning Test"]
-    choice = st.sidebar.selectbox("Select Test", menu)
+        # Set menu options
+        menu = ["Grammar Test", "Comprehension Test", "Logical Reasoning Test"]
+        choice = st.sidebar.selectbox("Select Test", menu)
 
-    # Render selected test page
-    if choice == "Grammar Test":
-        grammar_test()
-    elif choice == "Comprehension Test":
-        comprehension_test()
-    elif choice == "Logical Reasoning Test":
-        logical_reasoning_test()
-    elif choice == "Final Score":
-        final_score()
+        # Render selected test page
+        if choice == "Grammar Test":
+            grammar_test()
+        elif choice == "Comprehension Test":
+            comprehension_test()
+        elif choice == "Logical Reasoning Test":
+            logical_reasoning_test()
+        elif choice == "Final Score":
+            final_score()
 
-# Define grammar test page
+            # Define grammar test page
 def grammar_test():
     st.title("Grammar Test")
     # List of questions and answers
@@ -281,7 +281,7 @@ John decided to keep the dog and named it Rusty.\n Rusty became John's constant 
     if st.button("Submit"):
         score2 = calculate_score(answers)
         st.write("Comprehension Test Score: ", score2)
-	name = username
+        name = username
         test = "Comprehension Test"
         score = score2
         time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -379,15 +379,6 @@ def logical_reasoning_test():
         with open("scores.txt", "w") as file:
             file.write(f"{name}: {test}: {score}: {time} \n")
 
-# Define final score page
-def final_score():
-    st.title("Final Score")
-        
-    if st.button("Submit Score"):
-        with open("scores.txt", "w") as file:
-            file.write(f"Name: {name}\nEmail: {email}\nScore: {score}\nTime: {timestampt}\n\n")
-
-
  # Add footer
     with st.container():
         st.write("")
@@ -407,8 +398,8 @@ def final_score():
         st.write("")
         st.write("")
         st.write("")
-        st.write("Sample Aptitude test for evans")
-        st.write("Copyright © 2023")
+        st.write("English Aptitude Test")
+        st.write("Copyright © Julfretics Inc 2023")
         st.write("")
         st.write("")
         st.write("")
