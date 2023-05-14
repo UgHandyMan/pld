@@ -183,7 +183,7 @@ def grammar_test():
         calculate_score(answers)
         score1 = calculate_score(answers)
         st.write("Grammar Test score: ", score1)
-	name = username
+        name = username
         test = "Grammar Test"
         score = score1
         time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -372,7 +372,7 @@ def logical_reasoning_test():
     if st.button("Submit"):
         score3 = calculate_score(answers)
         st.write("Logical Reasoning Test Score:", score3)
-	name = username
+        name = username
         test = "Logical Reasoning Test"
         score = score3
         time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
