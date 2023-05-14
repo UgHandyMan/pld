@@ -50,7 +50,7 @@ def main():
     st.title("Aptitude Test")
 
     st.sidebar.title('User Information')
-    name = st.sidebar.text_input("Enter your Name")
+    ussername = st.sidebar.text_input("Enter your Name")
     email = st.sidebar.text_input("Enter your Email Address")
 
     st.write(f'Welcome {name}!')
@@ -183,6 +183,7 @@ def grammar_test():
         calculate_score(answers)
         score1 = calculate_score(answers)
         st.write("Grammar Test score: ", score1)
+	name = username
         test = "Grammar Test"
         score = score1
         time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -280,6 +281,7 @@ John decided to keep the dog and named it Rusty.\n Rusty became John's constant 
     if st.button("Submit"):
         score2 = calculate_score(answers)
         st.write("Comprehension Test Score: ", score2)
+	name = username
         test = "Comprehension Test"
         score = score2
         time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -370,6 +372,7 @@ def logical_reasoning_test():
     if st.button("Submit"):
         score3 = calculate_score(answers)
         st.write("Logical Reasoning Test Score:", score3)
+	name = username
         test = "Logical Reasoning Test"
         score = score3
         time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
