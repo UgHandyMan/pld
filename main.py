@@ -155,10 +155,9 @@ def main():
     },
 	
 ]
-
             # Function to show the questions and options
-			def show_question(question_dict):
-			st.write(question_dict["question"])
+            def show_question(question_dict):
+            st.write(question_dict["question"])
             user_answer = st.radio("Select an answer:", question_dict["options"], key=question_dict["question"])
             return user_answer
 
