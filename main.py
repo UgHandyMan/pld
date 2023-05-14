@@ -76,10 +76,10 @@ def main():
             final_score()
 
             # Define grammar test page
-def grammar_test():
-    st.title("Grammar Test")
-    # List of questions and answers
-    questions = [    {     "question": "Which sentence uses the correct article?",
+        def grammar_test():
+		    st.title("Grammar Test")
+			# List of questions and answers
+			questions = [    {     "question": "Which sentence uses the correct article?",
         "options": ["A.  He is a European citizen.", "B. He is an European citizen.", "C. He is the European citizen.", "D. He is of European citizen."],
         "answer": "A.  He is a European citizen."
     },
@@ -156,46 +156,46 @@ def grammar_test():
 	
 ]
 
-    # Function to show the questions and options
-    def show_question(question_dict):
-        st.write(question_dict["question"])
-        user_answer = st.radio("Select an answer:", question_dict["options"], key=question_dict["question"])
-        return user_answer
+            # Function to show the questions and options
+			def show_question(question_dict):
+			st.write(question_dict["question"])
+            user_answer = st.radio("Select an answer:", question_dict["options"], key=question_dict["question"])
+            return user_answer
 
     
-    # Function to calculate and display the score
-    def calculate_score(answers):
-        score1 = 0
-        for i, ans in enumerate(answers):
-            if ans == questions[i]["answer"]:
-                score1 += 1
-        return score1
+            # Function to calculate and display the score
+            def calculate_score(answers):
+                score1 = 0
+                for i, ans in enumerate(answers):
+                    if ans == questions[i]["answer"]:
+                        score1 += 1
+                return score1
 
-    # Main App
-    st.write("Answer the following questions:")
+            # Main App
+            st.write("Answer the following questions:")
 
-    answers = []
-    for i, question in enumerate(questions):
-        st.write(f"Question {i+1}")
-        answers.append(show_question(question))
+            answers = []
+            for i, question in enumerate(questions):
+                st.write(f"Question {i+1}")
+                answers.append(show_question(question))
 
-    if st.button("Submit"):
-        calculate_score(answers)
-        score1 = calculate_score(answers)
-        st.write("Grammar Test score: ", score1)
-        name = username
-        test = "Grammar Test"
-        score = score1
-        time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with open("scores.txt", "w") as file:
-            file.write(f"{name}: {test}: {score}: {time} \n")
+            if st.button("Submit"):
+                calculate_score(answers)
+                score1 = calculate_score(answers)
+                st.write("Grammar Test score: ", score1)
+                name = username
+                test = "Grammar Test"
+                score = score1
+                time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                with open("scores.txt", "w") as file:
+                    file.write(f"{name}: {test}: {score}: {time} \n")
 
-# Define comprehension test page
-def comprehension_test():
-    st.title("Comprehension Test")
-    st.markdown(
-        """
-            Please read the story carefully before attempting to answer the questions.\n The sun was setting over the mountains as John sat outside his cabin, sipping a cup of hot tea.\n He had been living alone in the wilderness for the past three years, and he loved every minute of it.\n The silence, the fresh air, and the stunning views made him feel more alive than ever.\n As he sat there, lost in thought, he heard a rustling sound coming from the bushes.\n He froze, listening intently, and heard it again.\n
+        # Define comprehension test page
+        def comprehension_test():
+            st.title("Comprehension Test")
+            st.markdown(
+                """
+                    Please read the story carefully before attempting to answer the questions.\n The sun was setting over the mountains as John sat outside his cabin, sipping a cup of hot tea.\n He had been living alone in the wilderness for the past three years, and he loved every minute of it.\n The silence, the fresh air, and the stunning views made him feel more alive than ever.\n As he sat there, lost in thought, he heard a rustling sound coming from the bushes.\n He froze, listening intently, and heard it again.\n
 Slowly, he got up and walked towards the bushes, his heart racing. What could it be?\n
 Suddenly, a small, scruffy-looking dog appeared from behind the bushes, wagging its tail.\n John breathed a sigh of relief and smiled.\n The dog looked hungry and scared, and John knew he had to help it.\n He gave the dog some food and water, and soon enough, it was wagging its tail and barking happily. 
 John decided to keep the dog and named it Rusty.\n Rusty became John's constant companion and soon learned to love the wilderness as much as John did.
@@ -254,46 +254,45 @@ John decided to keep the dog and named it Rusty.\n Rusty became John's constant 
     },
 ]
 
-     # Function to show the questions and options
-    def show_question(question_dict):
-        st.write(question_dict["question"])
-        user_answer = st.radio("Select an answer:", question_dict["options"], key=question_dict["question"])
-        return user_answer
+            # Function to show the questions and options
+            def show_question(question_dict):
+                st.write(question_dict["question"])
+                user_answer = st.radio("Select an answer:", question_dict["options"], key=question_dict["question"])
+                return user_answer
 
-    score2 = 0
-    # Function to calculate and display the score
-    def calculate_score(answers):
-        global score2
-        score2 = 0
-        for i, ans in enumerate(answers):
-            if ans == questions[i]["answer"]:
-                score2 += 1
-        return score2
+    
+            # Function to calculate and display the score
+            def calculate_score(answers):
+                score2 = 0
+                for i, ans in enumerate(answers):
+                    if ans == questions[i]["answer"]:
+                        score2 += 1
+                return score2
 
-    # Main App
-    st.write("Answer the following questions:")
+            # Main App
+            st.write("Answer the following questions:")
 
-    answers = []
-    for i, question in enumerate(questions):
-        st.write(f"Question {i+1}")
-        answers.append(show_question(question))
+            answers = []
+            for i, question in enumerate(questions):
+                st.write(f"Question {i+1}")
+                answers.append(show_question(question))
 
-    if st.button("Submit"):
-        score2 = calculate_score(answers)
-        st.write("Comprehension Test Score: ", score2)
-        name = username
-        test = "Comprehension Test"
-        score = score2
-        time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with open("scores.txt", "w") as file:
-            file.write(f"{name}: {test}: {score}: {time} \n")
+            if st.button("Submit"):
+                score2 = calculate_score(answers)
+                st.write("Comprehension Test Score: ", score2)
+                name = username
+                test = "Comprehension Test"
+                score = score2
+                time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                with open("scores.txt", "w") as file:
+                    file.write(f"{name}: {test}: {score}: {time} \n")
 
 
-# Define logical reasoning test page
-def logical_reasoning_test():
-    st.title("Logical Reasoning Test")
-     # List of questions and answers
-    questions = [ {
+        # Define logical reasoning test page
+        def logical_reasoning_test():
+            st.title("Logical Reasoning Test")
+            # List of questions and answers
+            questions = [ {
         "question": "In a group of 50 students, 35 play basketball, 25 play volleyball, and 10 play both. How many students play neither sport?",
         "options": ["A. 0", "B. 5", "C. 10", "D. 15"],
         "answer": "D. 15"
@@ -345,64 +344,64 @@ def logical_reasoning_test():
     }
 ]
  
-    # Function to show the questions and options
-    def show_question(question_dict):
-        st.write(question_dict["question"])
-        user_answer = st.radio("Select an answer:", question_dict["options"], key=question_dict["question"])
-        return user_answer
+            # Function to show the questions and options
+            def show_question(question_dict):
+                st.write(question_dict["question"])
+                user_answer = st.radio("Select an answer:", question_dict["options"], key=question_dict["question"])
+                return user_answer
 
-    score3 = 0
-    # Function to calculate and display the score
-    def calculate_score(answers):
-        global score3
-        score3 = 0
-        for i, ans in enumerate(answers):
-            if ans == questions[i]["answer"]:
-                score3 += 1
-        return score3
+            
+            # Function to calculate and display the score
+            def calculate_score(answers):
+       
+                score3 = 0
+                for i, ans in enumerate(answers):
+                    if ans == questions[i]["answer"]:
+                        score3 += 1
+                return score3
 
-    # Main App
-    st.write("Answer the following questions:")
+            # Main App
+            st.write("Answer the following questions:")
 
-    answers = []
-    for i, question in enumerate(questions):
-        st.write(f"Question {i+1}")
-        answers.append(show_question(question))
+            answers = []
+            for i, question in enumerate(questions):
+                st.write(f"Question {i+1}")
+                answers.append(show_question(question))
 
-    if st.button("Submit"):
-        score3 = calculate_score(answers)
-        st.write("Logical Reasoning Test Score:", score3)
-        name = username
-        test = "Logical Reasoning Test"
-        score = score3
-        time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with open("scores.txt", "w") as file:
-            file.write(f"{name}: {test}: {score}: {time} \n")
+            if st.button("Submit"):
+                score3 = calculate_score(answers)
+                st.write("Logical Reasoning Test Score:", score3)
+                name = username
+                test = "Logical Reasoning Test"
+                score = score3
+                time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                with open("scores.txt", "w") as file:
+                    file.write(f"{name}: {test}: {score}: {time} \n")
 
- # Add footer
-    with st.container():
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("English Aptitude Test")
-        st.write("Copyright © Julfretics Inc 2023")
-        st.write("")
-        st.write("")
-        st.write("")
+        # Add footer
+        with st.container():
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("English Aptitude Test")
+            st.write("Copyright © Julfretics Inc 2023")
+            st.write("")
+            st.write("")
+            st.write("")
 
 # Run the main app function
 if __name__ == "__main__":
