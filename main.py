@@ -77,9 +77,9 @@ def main():
 
             # Define grammar test page
         def grammar_test():
-		    st.title("Grammar Test")
-			# List of questions and answers
-			questions = [    {     "question": "Which sentence uses the correct article?",
+	    st.title("Grammar Test")
+	    # List of questions and answers
+	    questions = [    {     "question": "Which sentence uses the correct article?",
         "options": ["A.  He is a European citizen.", "B. He is an European citizen.", "C. He is the European citizen.", "D. He is of European citizen."],
         "answer": "A.  He is a European citizen."
     },
