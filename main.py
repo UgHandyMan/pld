@@ -1,4 +1,5 @@
 import streamlit as st
+import datetime 
 
 # Define colors
 color_bg = "#f9f9f9"
@@ -47,12 +48,18 @@ def main():
 
     # Set app title and instructions
     st.title("Aptitude Test")
+
+    st.sidebar.title('User Information')
+    name = st.sidebar.text_input("Enter your Name")
+    email = st.sidebar.text_input("Enter your Email Address")
+
+    st.write(f'Welcome {name}!')
     st.markdown(
         """
-        This is a test of your abilities in grammar, comprehension, and logical reasoning. 
+        This is a test of your abilities in grammar, comprehension, and logical reasoning.
         Please select the test you would like to take from the menu on the left.
         """
-    )
+        )
 
     # Set menu options
     menu = ["Final Score", "Grammar Test", "Comprehension Test", "Logical Reasoning Test"]
@@ -155,13 +162,14 @@ def grammar_test():
         user_answer = st.radio("Select an answer:", question_dict["options"], key=question_dict["question"])
         return user_answer
 
+    
     # Function to calculate and display the score
     def calculate_score(answers):
         score1 = 0
         for i, ans in enumerate(answers):
             if ans == questions[i]["answer"]:
                 score1 += 1
-        st.write("Your score is: ", score1)
+        return score1
 
     # Main App
     st.write("Answer the following questions:")
@@ -173,6 +181,13 @@ def grammar_test():
 
     if st.button("Submit"):
         calculate_score(answers)
+        score1 = calculate_score(answers)
+        st.write("Grammar Test score: ", score1)
+        test = "Grammar Test"
+        score = score1
+        time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open("scores.txt", "w") as file:
+            file.write(f"{name}: {test}: {score}: {time} \n")
 
 # Define comprehension test page
 def comprehension_test():
@@ -244,13 +259,15 @@ John decided to keep the dog and named it Rusty.\n Rusty became John's constant 
         user_answer = st.radio("Select an answer:", question_dict["options"], key=question_dict["question"])
         return user_answer
 
+    score2 = 0
     # Function to calculate and display the score
     def calculate_score(answers):
+        global score2
         score2 = 0
         for i, ans in enumerate(answers):
             if ans == questions[i]["answer"]:
                 score2 += 1
-        st.write("Your score is: ", score2)
+        return score2
 
     # Main App
     st.write("Answer the following questions:")
@@ -261,7 +278,14 @@ John decided to keep the dog and named it Rusty.\n Rusty became John's constant 
         answers.append(show_question(question))
 
     if st.button("Submit"):
-        calculate_score(answers)
+        score2 = calculate_score(answers)
+        st.write("Comprehension Test Score: ", score2)
+        test = "Comprehension Test"
+        score = score2
+        time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open("scores.txt", "w") as file:
+            file.write(f"{name}: {test}: {score}: {time} \n")
+
 
 # Define logical reasoning test page
 def logical_reasoning_test():
@@ -325,13 +349,15 @@ def logical_reasoning_test():
         user_answer = st.radio("Select an answer:", question_dict["options"], key=question_dict["question"])
         return user_answer
 
+    score3 = 0
     # Function to calculate and display the score
     def calculate_score(answers):
+        global score3
         score3 = 0
         for i, ans in enumerate(answers):
             if ans == questions[i]["answer"]:
                 score3 += 1
-        st.write("Your score is: ", score3)
+        return score3
 
     # Main App
     st.write("Answer the following questions:")
@@ -342,24 +368,21 @@ def logical_reasoning_test():
         answers.append(show_question(question))
 
     if st.button("Submit"):
-        calculate_score(answers)
+        score3 = calculate_score(answers)
+        st.write("Logical Reasoning Test Score:", score3)
+        test = "Logical Reasoning Test"
+        score = score3
+        time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open("scores.txt", "w") as file:
+            file.write(f"{name}: {test}: {score}: {time} \n")
 
-    # Define final score page
+# Define final score page
 def final_score():
     st.title("Final Score")
-    
-    def calculate_final_score(score1, score2, score3):
-        final_score = score1 + score2 + score3
-        percentage_score = (final_score / 35) * 100
-        return percentage_score
-    
-    score1 = st.number_input("Enter Grammar Test Score", value=0)
-    score2 = st.number_input("Enter Comprehension Test score", value=0)
-    score3 = st.number_input("Enter Logical Reasoning Test Score", value=0)
-    
-    if st.button("Calculate final score"):
-        percentage_score = calculate_final_score(score1, score2, score3)
-        st.write(f'Your final score is: {percentage_score:.2f}%')
+        
+    if st.button("Submit Score"):
+        with open("scores.txt", "w") as file:
+            file.write(f"Name: {name}\nEmail: {email}\nScore: {score}\nTime: {timestampt}\n\n")
 
 
  # Add footer
